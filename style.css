@@ -1,0 +1,212 @@
+:root {
+    --bg-color: #d3d9c5; /* Soft green background */
+    --primary-color: #4a6439; /* Darker green for text */
+    --accent-color: #f8f5ed; /* Neutral beige for accents */
+    --detail-color: #bfa17f; /* Soft brown for details */
+    --secondary-color: #a6b293; /* Muted olive green */
+}
+
+html, body {
+    height: 100%;  /* Ensure the body and html take full height of the viewport */
+    margin: 0;
+    padding: 0;
+    overflow: hidden;  
+}
+
+/* Global Body Styles */
+body {
+    background: var(--bg-color);
+    position: relative;
+    overflow: hidden; /* Prevent scroll */
+    font-family: 'Poppins', sans-serif;
+    color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensure body takes up full viewport height */
+    margin: 0;
+    padding: 0 15px;
+    flex-direction: column; /* Align content vertically */
+}
+
+/* Floating Shapes Effect */
+body::before, body::after {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    animation: floatShapes 8s infinite ease-in-out;
+    z-index: -1;
+}
+
+body::before {
+    background: var(--accent-color);
+    top: -100px;
+    left: -100px;
+    animation-delay: 0s;
+}
+
+body::after {
+    background: var(--secondary-color);
+    bottom: -100px;
+    right: -100px;
+    animation-delay: 4s;
+}
+
+@keyframes floatShapes {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(20px); }
+}
+
+
+/* Home Icon */
+.home-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: var(--primary-color); /* Use root variable */
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+    z-index: 1; /* Ensure home icon is in front */
+}
+
+.home-icon:hover {
+    color: var(--secondary-color); /* Use root variable */
+}
+
+/* Start Page */
+.start-page {
+    text-align: center; /* Ensures text inside the start-page is centered */
+    background-color: #fff;
+    padding: 40px 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    width: 100%;
+    max-width: 380px;
+    z-index: 2; /* Ensure start page content is above floating shapes */
+}
+
+/* Start Button */
+.start-button {
+    padding: 15px 30px;
+    background-color: var(--primary-color); /* Use root variable */
+    color: var(--accent-color); /* Use root variable */
+    border-radius: 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    z-index: 2; /* Ensure button is above background shapes */
+}
+
+.start-button:hover {
+    background-color: var(--secondary-color); /* Use root variable */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.start-button:active {
+    transform: scale(0.98);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.chooselevel-logo {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px; /* Center horizontally and add space below */
+}
+
+.menu h1 {
+    margin-top: 30px; /* Space above text */
+    margin-bottom: 30px; /* Space below text */
+    color: var(--primary-color);
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Ensure consistent gap between items */
+    padding: 40px 20px;
+    overflow: hidden; /* Prevent content overflow */
+}
+
+/* Difficulty Buttons */
+.difficulty-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Menu Buttons */
+.menu-button {
+    padding: 25px 0;
+    text-decoration: none; /* Remove underline */
+    background-color: var(--primary-color); /* Use root variable */
+    color: var(--accent-color); /* Use root variable */
+    border-radius: 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif; /* Use same font as start button */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: inline-flex; /* Use flexbox to center the content */
+    justify-content: center; /* Horizontally center the text */
+    align-items: center; /* Vertically center the text */
+    text-align: center; /* Ensure text is centered if it's multiline */
+}
+
+.menu-button:hover {
+    background-color: var(--secondary-color); /* Use root variable */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.menu-button:active {
+    transform: scale(0.98);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .start-page, .menu {
+        padding: 30px 15px;
+    }
+
+    .game-logo {
+        max-width: 250px;
+    }
+
+    .start-button, .menu-button {
+        padding: 12px 25px;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .start-page, .menu {
+        padding: 25px 10px;
+    }
+
+    .game-logo {
+        max-width: 200px;
+    }
+
+    .start-button, .menu-button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+}
+/*  Desktop Screens */
+@media (min-width: 1024px) {
+    .start-button, .menu-button {
+        width: 300px; /* Set a specific width for desktop buttons */
+        padding: 15px 0; /* Adjust padding to suit the width */
+        font-size: 1.2rem; /* Ensure the font size matches the button size */
+    }
+}

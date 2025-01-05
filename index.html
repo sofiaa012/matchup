@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game - Start</title>
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/start.css">
+</head>
+
+<body>
+    <img src="images/gamelogo.png" alt="Memory Game Logo" class="game-logo">
+    <a href="start.html" class="start-button">Mula</a>
+    <button class="how-button" id="howButton">Cara Bermain</button>
+    <button class="notes-button" id="notesButton">Nota</button>
+    <button class="about-button" id="aboutButton">Mengenai Kami</button>
+
+    <!-- Popup Modal -->
+    <div class="popup-modal" id="popupModal">
+        <div class="popup-content">
+            <h2>Cara Bermain Permainan Memori</h2>
+            <p>1. Permainan ini terdiri daripada grid kad, semuanya dengan muka ke belakang.</p>
+            <p>2. Klik pada mana-mana dua kad untuk terbalikkan mereka.</p>
+            <div class="example">
+                <img src="images/examplesolution1.png" alt="Example Image 1" class="example-image">
+                <div class="match-text">
+                    <span>&rarr;</span>
+                    <p>Sepadan</p>
+                </div>
+                <img src="images/exampleproblem1.png" alt="Example Image 2" class="example-image">
+            </div>
+            <p>3. Jika kad tersebut sepadan, ia akan kekal terbalik. Jika tidak, ia akan kembali terbalik.</p>
+            <p>4. Matlamat permainan ini adalah untuk memadankan semua kad dengan betul.</p>
+            <p>5. Selamat bermain dan uji kemahiran ingatan anda!</p>
+            <button class="close-button" id="closeButton">Tutup</button>
+        </div>
+    </div>
+
+
+    <!-- Notes Popup Modal -->
+    <div class="popup-modal" id="notesPopupModal">
+        <div class="popup-content">
+            <h2>Nota Penting</h2>
+            <ul class="notes-list">
+                <li class="note-item">
+                    <img src="images/problem1.png" alt="Problem Image 1" class="note-image">
+                    <div class="note-content">
+                        <p><strong>Masalah:</strong> Pembuangan sisa kimia di sungai.</p>
+                        <p><strong>Penyelesaian:</strong> Melabur dalam rawatan air.</p>
+                    </div>
+
+                </li>
+                <li class="note-item">
+                    <img src="images/problem2.png" alt="Problem Image 2" class="note-image">
+                    <div class="note-content">
+                        <p><strong>Masalah:</strong> Pembalakan haram.</p>
+                        <p><strong>Penyelesaian:</strong> Mencegah pembalakan haram.</p>
+                    </div>
+
+                </li>
+                <li class="note-item">
+                    <img src="images/problem3.png" alt="Problem Image 3" class="note-image">
+                    <div class="note-content">
+                        <p><strong>Masalah:</strong> Penipisan lapisan ozon.</p>
+                        <p><strong>Penyelesaian:</strong> Mengurangkan pelepasan gas rumah hijau.</p>
+                    </div>
+
+                </li>
+                <li class="note-item">
+                    <img src="images/problem4.png" alt="Problem Image 4" class="note-image">
+                    <div class="note-content">
+                        <p><strong>Masalah:</strong> Pemanasan global.</p>
+                        <p><strong>Penyelesaian:</strong> Mempromosikan bandar hijau.</p>
+                    </div>
+                </li>
+                <li class="note-item">
+                    <img src="images/problem5.png" alt="Problem Image 5" class="note-image">
+                    <div class="note-content">
+                        <p><strong>Masalah:</strong> Jerebu</p>
+                        <p><strong>Penyelesaian:</strong> "Zero Carbon" inisiatif.</p>
+                    </div>
+
+                </li>
+                <li class="note-item">
+                    <img src="images/problem6.png" alt="Problem Image 6" class="note-image">
+                    <div class="note-content">
+                        <p><strong>Masalah:</strong> Sisa yang tidak diuruskan dengan baik</p>
+                        <p><strong>Penyelesaian:</strong> Kitar semula sampah atau menggunakan insinerator.</p>
+                    </div>
+
+                </li>
+                <li class="note-item">
+                    <img src="images/problem7.png" alt="Problem Image 7" class="note-image">
+                    <div class="note-content">
+                        <p><strong>Masalah:</strong> Penggunaan bahan api fosil dan menghasilkan pelepasan gas rumah
+                            kaca.</p>
+                        <p><strong>Penyelesaian:</strong> Beralih ke tenaga boleh diperbaharui.</p>
+                    </div>
+
+                </li>
+                <li class="note-item">
+                    <img src="images/problem8.png" alt="Problem Image 8" class="note-image">
+                    <div class="note-content">
+                        <p><strong>Masalah:</strong> peranti elektronik yang dibuang tanpa pengurusan yang betul.</p>
+                        <p><strong>Penyelesaian:</strong> Mempromosikan program kitar semula peranti elektronik.</p>
+                    </div>
+
+                </li>
+                <li class="note-item">
+                    <img src="images/problem9.png" alt="Problem Image 9" class="note-image">
+                    <div class="note-content">
+                        <p><strong>Masalah:</strong> bahan pencemar udara yang membahayakan kesihatan dan alam sekitar.
+                        </p>
+                        <p><strong>Penyelesaian:</strong> Mempromosikan penggunaan pengangkutan awam.</p>
+                    </div>
+                </li>
+                <li class="note-item">
+                    <img src="images/problem10.png" alt="Problem Image 10" class="note-image">
+                    <div class="note-content">
+                        <p><strong>Masalah:</strong> Penggunaan bahan api fosil untuk mesin pertanian,.</p>
+                        <p><strong>Penyelesaian:</strong> Mengamalkan pertanian lestari.</p>
+                    </div>
+
+                </li>
+            </ul>
+
+            <button class="close-button" id="closeNotesButton">Tutup</button>
+        </div>
+    </div>
+
+
+    <!-- About Popup Modal -->
+    <div class="popup-modal" id="aboutPopupModal">
+        <div class="popup-content">
+            <h2>Mengenai Kami</h2>
+            <ul class="about-list">
+                <li class="about-item">
+                    <img src="images/syah.png" alt="Problem Image 1" class="about-image">
+                    <div class="about-content">
+                        <p><strong>Nama:</strong> Syahirah Nabiha<br> Binti Mohd Yazid</p>
+                        <p><strong>No. Matriks:</strong> 2024323175</p>
+                        <p><strong>Kursus:</strong> CDCS253</p>
+                        <p><strong>Peranan:</strong> Pembangun perisian</p>
+                    </div>
+
+                </li>
+                <li class="about-item">
+                    <div class="about-content">
+                        <p><strong>Nama:</strong> Nur Masturina Sofia Binti Mohd Assafi</p>
+                        <p><strong>No. Matriks:</strong> 2024786283</p>
+                        <p><strong>Kursus:</strong> CDCS253</p>
+                        <p><strong>Peranan:</strong> Pembangun perisian</p>
+                    </div>
+                    <img src="images/sofia.png" alt="Problem Image 2" class="about-image">
+
+                </li>
+                <li class="about-item">
+                    <img src="images/ama.png" alt="Problem Image 3" class="about-image">
+                    <div class="about-content">
+                        <p><strong>Nama:</strong> Nur Zulaikha <br>Amanina Binti Shahrulnizam</p>
+                        <p><strong>No. Matriks:</strong> 2024905199</p>
+                        <p><strong>Kursus:</strong> CDCS253</p>
+                        <p><strong>Peranan:</strong> Pembangun perisian</p>
+                    </div>
+
+                </li>
+                <li class="about-item">
+                    <div class="about-content">
+                        <p><strong>Nama:</strong> Syadatul Alia Binti Kamal Ariffin</p>
+                        <p><strong>No. Matriks:</strong> 2021495202</p>
+                        <p><strong>Kursus:</strong> CFAP230</p>
+                        <p><strong>Peranan:</strong> Penyelidik</p>
+                    </div>
+                    <img src="images/syada.png" alt="Problem Image 4" class="about-image">
+                </li>
+                <li class="about-item">
+                    <img src="images/qur.png" alt="Problem Image 5" class="about-image">
+                    <div class="about-content">
+                        <p><strong>Nama:</strong> Nur Qurratulaini <br> bt Basirun </p>
+                        <p><strong>No. Matriks:</strong> 2022970957</p>
+                        <p><strong>Kursus:</strong> CFAP230</p>
+                        <p><strong>Peranan:</strong> Penyelidik</p>
+                    </div>
+                </li>
+            </ul>
+
+            <button class="close-button" id="closeAboutButton">Tutup</button>
+        </div>
+    </div>
+
+
+    <script src="start.js"></script>
+</body>
+
+</html>

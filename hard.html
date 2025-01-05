@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game - Hard</title>
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/game.css">
+    <link rel="stylesheet" href="styles/hard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body data-difficulty="hard">
+
+    <header>
+        <img src="images/hardgame.png" alt="Hard Game Logo" class="hardgame-logo">
+    </header>
+
+    <div class="game-header">
+        <div class="timer" id="timer">Time: 02:00</div>
+        <div class="lives" id="lives">
+            ❤️ ❤️ ❤️
+        </div>
+        <a href="#" class="home-icon" id="home-icon">
+            <i class="fas fa-home"></i>
+        </a>
+    </div>
+    <div class="game-container" id="game-board"></div>
+
+    <script src="script.js"></script>
+    <script>
+        // Initialize hard level
+        startGame('hard');
+    </script>
+</body>
+</html>
