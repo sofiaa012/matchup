@@ -127,12 +127,6 @@ body::after {
         width: 150px; /* Adjust size of logo */
         margin-bottom: 50px; /* Increase this value to add more space below the logo */
     }
-    /* Game Container */
-    .game-container {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr); /* Adjust grid columns */
-        gap: 10px; /* Space between cards */
-    }
     
     /* Card Styles */
     .card {
