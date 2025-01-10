@@ -87,3 +87,31 @@ window.addEventListener("click", (event) => {
         document.body.classList.remove('modal-open'); // Re-enable body scroll
     }
 });
+
+
+//kredit start
+
+// Get kredit modal elements
+const kreditButton = document.getElementById("kreditButton");
+const kreditPopupModal = document.getElementById("kreditPopupModal");
+const closeKreditButton = document.getElementById("closeKreditButton");
+
+// Show the notes popup when "Notes" button is clicked
+kreditButton.addEventListener("click", () => {
+    kreditPopupModal.style.display = "flex";
+    document.body.classList.add('modal-open'); // Disable body scroll
+});
+
+// Hide the notes popup when the "Close" button is clicked
+closeKreditButton.addEventListener("click", () => {
+    kreditPopupModal.style.display = "none";
+    document.body.classList.remove('modal-open'); // Re-enable body scroll
+});
+
+// Close the notes popup when clicking outside the modal content
+window.addEventListener("click", (event) => {
+    if (event.target === kreditPopupModal) {
+        kreditPopupModal.style.display = "none";
+        document.body.classList.remove('modal-open'); // Re-enable body scroll
+    }
+});
